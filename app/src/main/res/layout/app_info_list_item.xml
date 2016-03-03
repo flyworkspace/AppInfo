@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="4dp">
+    <ImageView
+            android:id="@+id/imageview_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="4dp"/>
+
+    <TextView
+            android:id="@+id/textview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imageview_icon"
+            tools:text="name"/>
+
+    <TextView
+            android:id="@+id/textview_pkgname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/imageview_icon"
+            tools:text="com.letv.test"/>
+</RelativeLayout>
