@@ -18,6 +18,14 @@
             tools:text="name"/>
 
     <TextView
+            android:id="@+id/textview_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/textview_name"
+            tools:text="version"/>
+
+    <TextView
             android:id="@+id/textview_pkgname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

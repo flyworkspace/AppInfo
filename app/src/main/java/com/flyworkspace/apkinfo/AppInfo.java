@@ -11,6 +11,8 @@ public class AppInfo {
     private String packageName;
     private Drawable icon;
     private Intent appIntent;
+    private String versionName;
+    private int versionCode;
 
     public String getAppName() {
         return appName;
@@ -44,11 +46,29 @@ public class AppInfo {
         this.appIntent = appIntent;
     }
 
+    public String getVersionName() {
+        return versionName;
+    }
+
+    public void setVersionName(String versionName) {
+        this.versionName = versionName;
+    }
+
+    public int getVersionCode() {
+        return versionCode;
+    }
+
+    public void setVersionCode(int versionCode) {
+        this.versionCode = versionCode;
+    }
+
     @Override
     public String toString() {
         return "AppInfo{" +
                 "appName='" + appName + '\'' +
                 ", packageName='" + packageName + '\'' +
+                ", versionName='" + versionName + '\'' +
+                ", versionCode='" + versionCode + '\'' +
                 '}';
     }
 }

@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
             viewHolder.ivIcon.setImageDrawable(appInfo.getIcon());
             viewHolder.tvName.setText(appInfo.getAppName());
             viewHolder.tvPkgName.setText(appInfo.getPackageName());
+            viewHolder.tvVersion.setText(getString(R.string.version_name_code, appInfo.getVersionName(), appInfo.getVersionCode()));
             return convertView;
         }
     }
@@ -109,11 +110,13 @@ public class MainActivity extends AppCompatActivity {
         ImageView ivIcon;
         TextView tvName;
         TextView tvPkgName;
+        TextView tvVersion;
 
         public ViewHolder(View view) {
             this.ivIcon = (ImageView) view.findViewById(R.id.imageview_icon);
             this.tvName = (TextView) view.findViewById(R.id.textview_name);
             this.tvPkgName = (TextView) view.findViewById(R.id.textview_pkgname);
+            this.tvVersion = (TextView) view.findViewById(R.id.textview_version);
         }
     }
 
@@ -128,6 +131,8 @@ public class MainActivity extends AppCompatActivity {
                 info.setPackageName(packageInfo.packageName);
                 info.setIcon(packageInfo.applicationInfo.loadIcon(pm));
                 info.setAppIntent(pm.getLaunchIntentForPackage(packageInfo.packageName));
+                info.setVersionCode(packageInfo.versionCode);
+                info.setVersionName(packageInfo.versionName);
                 appInfoList.add(info);
             } else {
                 // System app
